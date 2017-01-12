@@ -1,18 +1,21 @@
 $(document).ready(function() {
-  $("#age-form").submit(function(event) {
-    var ageInput = parseInt($("#age").val());
+  $("#blanks").submit(function(event) {
+    var side1 = parseInt($("input#side1").val());
+    var side2 = parseInt($("input#side2").val());
+    var side3 = parseInt($("input#Side3").val());
+    var sum =
 
-    if (ageInput < 18) {
-      alert("We are excited you want to vote! Unfortunately, you must be 18 years old or older.");
-      $("#vote-info").show();
-    } else if (ageInput === 18) {
-      alert("Hooray! You are exercising your right to vote. Choose your county.");
-      $("#area-form").show();
-    } else {
-      alert("Choose your county.");
-      $("#area-form").show();
-    };
-    event.preventDefault();
+
+if ((side1 + side2 <= side3) || (side1 + side3 <= side2) || (side2 + side3 <= side1)) 
+
+if (side1 === side2 === side3) {
+  $(".result").text("an equilateral");
+}
+else if ((side1 === side2) || (side2 === side3) || (side1 === side3)) {
+    $(".result").text("an isoceles");
+}
+else () {
+
+}
   });
-
 });
